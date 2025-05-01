@@ -1,21 +1,170 @@
-# 💫 About Me:
-I am currently working on the LLM training along with the data science.<br>Eager to apply analytical skills and programming expertise to real-world problems and contribute to innovative projects.<br>Adept at using tools like Python, C, C++ to extract insights and drive data-driven decision-making.
+# 🎤 **SAM - Voice Assistant** 🤖
 
-
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/Himanshu Jangid) 
-
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=coderyash-ai&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=coderyash-ai&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=coderyash-ai&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+A powerful **voice assistant** built using Python! SAM listens to your commands, processes them, and performs various tasks such as searching on Google, Wikipedia, controlling apps, sending WhatsApp messages, and more! 📱💻
 
 ---
-[![](https://visitcount.itsvg.in/api?id=coderyash-ai&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 🛠 **Requirements**
+
+Before you start using the voice assistant, make sure you have the following installed:
+
+- **Python 3.x**
+- **Required Libraries**:
+  - `speech_recognition`
+  - `pyttsx3`
+  - `wikipedia`
+  - `webbrowser`
+  - `winshell`
+  - `Levenshtein`
+  - `fuzzywuzzy`
+  - `pywhatkit`
+  - `pyautogui`
+  - `sqlite3`
+
+### Install the necessary packages:
+
+```bash
+pip install SpeechRecognition pyttsx3 wikipedia webbrowser winshell fuzzywuzzy Levenshtein pywhatkit pyautogui
+```
+
+---
+
+## 📦 **Features**
+
+- 🎙 **Voice Recognition**: Listen to your voice commands and respond accordingly.
+- 📖 **Wikipedia Search**: Search Wikipedia for answers with a single command.
+- 🔍 **Google Search**: Perform web searches on Google directly from your voice command.
+- 📺 **YouTube Search**: Search and watch videos on YouTube using your voice.
+- 🕒 **Time**: Ask the assistant for the current time.
+- 🗑 **Recycle Bin**: Empty the Recycle Bin with a command.
+- 📱 **WhatsApp Message**: Send WhatsApp messages to your contacts.
+- 💻 **App Launching**: Launch installed applications by name.
+- 📂 **File Search**: Search for files on your computer based on file types.
+- ❓ **Error Handling**: If the assistant doesn't understand the command, it asks for clarification.
+  
+---
+
+## 📝 **How to Use**
+
+1. **Run the Program**: Start by running the script. 
+   
+2. **Start Listening**: The assistant will start listening for commands once it’s ready.
+   
+3. **Give a Command**: Say commands like:
+   - "SAM, open YouTube"
+   - "SAM, search Wikipedia for Python"
+   - "SAM, what's the time?"
+   
+4. **Command Responses**: SAM will perform the task and provide spoken feedback using text-to-speech.
+
+---
+
+## 📂 **Project Structure**
+
+- `voice_assistant.py` — The main Python script for running the voice assistant.
+- `contacts.db` — Database for storing contacts for WhatsApp messaging.
+- `apps.txt` — A text file for storing app names and their corresponding app IDs.
+- `Whatsapp_contacts.txt` — A file containing contacts for WhatsApp messaging.
+
+---
+
+## 🛠 **How it Works**
+
+The **SAM voice assistant** works by:
+
+1. **Listening to Commands**: 
+   - The assistant listens for your voice input using the `speech_recognition` library.
+   - After recognizing the speech, it converts it into text for processing.
+
+2. **Processing Commands**: 
+   - SAM identifies keywords and matches them to predefined commands.
+   - SAM handles commands like opening websites (Google, YouTube), performing searches (Google, Wikipedia), emptying the Recycle Bin, and more.
+
+3. **Responding to the User**:
+   - SAM uses the `pyttsx3` library to speak back responses based on the command results.
+   - Commands can trigger actions such as opening an app, sending WhatsApp messages, or sharing files.
+
+---
+
+## 📑 **Detailed Command List**
+
+### 📚 **General Commands**
+
+- **Wikipedia Search**:  
+  Command: `search Wikipedia for <query>`  
+  Example: "SAM, search Wikipedia for Python"  
+  Description: Fetches a summary from Wikipedia about the specified query.
+
+- **Google Search**:  
+  Command: `search Google for <query>`  
+  Example: "SAM, search Google for Python programming"  
+  Description: Performs a Google search for the specified query.
+
+- **YouTube Search**:  
+  Command: `search YouTube for <query>`  
+  Example: "SAM, search YouTube for funny videos"  
+  Description: Opens YouTube and searches for the specified query.
+
+- **Current Time**:  
+  Command: `what is the time`  
+  Example: "SAM, what's the time?"  
+  Description: Provides the current system time.
+
+- **Recycle Bin**:  
+  Command: `empty the recycle bin`  
+  Description: Empties the Recycle Bin on your computer.
+
+---
+
+### 📱 **Messaging and Apps**
+
+- **Send WhatsApp Message**:  
+  Command: `send message to <contact_name>`  
+  Example: "SAM, send message to John"  
+  Description: Sends a WhatsApp message to the specified contact.
+
+- **Open App**:  
+  Command: `open <app_name>`  
+  Example: "SAM, open YouTube"  
+  Description: Launches the specified app.
+
+---
+
+### 📂 **File Search**
+
+- **Search Files**:  
+  Command: `search files for <file_type>`  
+  Example: "SAM, search files for .pdf"  
+  Description: Searches for files on your computer with the specified file extension.
+
+- **Open, Print, or Share File**:  
+  Command: `open <file_name>` / `print <file_name>` / `share <file_name>`  
+  Description: Opens, prints, or shares the selected file.
+
+---
+
+## 🔧 **Customization**
+
+### App Dictionary (`apps.txt`)
+- You can add additional applications to the `apps.txt` file to allow SAM to open more apps.
+- The format should be:  
+  `app_name, app_id`
+
+---
+
+## 🔒 **Security Considerations**
+
+- **WhatsApp**: Make sure the `Whatsapp_contacts.txt` file is properly secured as it contains phone numbers and contacts.
+- **Database**: Ensure that the `contacts.db` file is not exposed to unauthorized users, as it stores important contact information.
+
+---
+
+## 🧑‍💻 **Contributions**
+
+Feel free to fork the repository and submit issues or pull requests. If you encounter any bugs or have feature requests, please create an issue in the GitHub repository.
+
+---
+
+## 📝 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
